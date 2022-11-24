@@ -28,7 +28,7 @@ app.get('/ping', async (_, res) => {
         res.status(500).json({ message: 'Cannot connect to DB' });
     }
 });
-app.post('/check-card', card);
+app.post('/create-card', card);
 app.post('/api-gateway', async (_, res) => {
     const { status, message, error } = await apiGateway();
     res.status(status).json({ message, error });
